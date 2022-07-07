@@ -1,0 +1,12 @@
+#!/bin/sh
+
+SRC=$1
+OUT=${SRC%.*}
+
+if [ -z "$1" ]
+  then
+    echo "Error: no input file is specified."
+    exit 1
+fi
+
+pandoc $SRC -o $OUT.pdf -V indent=true --pdf-engine=lualatex -N
