@@ -5,7 +5,10 @@ author: "狂井 益生"
 date: 2022/7/7
 ---
 
-# 来てくれてありがとう
+# 1. 来てくれてありがとう
+エロあるよ（笑）
+
+\vspace{2px}
 ```go
 package main
 import "fmt"
@@ -14,6 +17,13 @@ func main() {
     fmt.Printf("帰れ");
 }
 ```
+\vspace{-5px}
+\begin{center}
+ソースコード1. 還れ
+\end{center}
+
+![画像も貼れます 当たり前だろ](../images/image.jpg)
+
 ↓の記述の前には1行開けましょう
 
 ---
