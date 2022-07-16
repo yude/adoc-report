@@ -6,8 +6,15 @@ date: 2022/7/7
 ---
 
 # 来てくれてありがとう
-帰れ\
-↓の記述の前には1行開けましょう\
+```go
+package main
+import "fmt"
+
+func main() {
+    fmt.Printf("帰れ");
+}
+```
+↓の記述の前には1行開けましょう
 
 ---
 urlcolor: cyan
