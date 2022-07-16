@@ -21,7 +21,7 @@ $ bdoc hoge.md
 ```
 
 ## License / Citations
-* `bdoc`
+* `bdoc`\
   MIT license.
-* `minted_filter.py`
+* `minted_filter.py`\
   [Story you have created a beautiful PDF of the source code containing at Pandoc + minted](https://blog.artwolf.in/a?ID=381ab2bd-810e-42d9-a8f0-c786ec3479b2)
