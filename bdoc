@@ -1,12 +1,25 @@
-#!/bin/sh
+#!/bin/bash
 
-SRC=$1
-OUT=${SRC%.*}
+mkdir -p .markdown_preview_tmp
+set -e
+cd .markdown_preview_tmp
+fname=`basename $1`
+cp ../$fname .
 
-if [ -z "$1" ]
-  then
-    echo "Error: no input file is specified."
-    exit 1
-fi
+cat <<EOF >> $fname
 
-pandoc $SRC -o $OUT.pdf -V indent=true --pdf-engine=lualatex -N
+---
+urlcolor: cyan
+header-includes:
+    - \usepackage{minted}
+    - \usepackage{setspace}
+    - \usepackage{mdframed}
+---
+EOF
+
+pandoc -s --filter minted_filter.py $fname -o ${fname%%.md}.tex -f markdown -t latex -V documentclass=bxjsarticle -V classoption=pandoc -V geometry:margin=10mm
+lualatex -shell-escape ${fname%%.md}.tex
+
+cp ${fname%%.md}.pdf ../${fname%%.md}.pdf
+cd ../
+rm -r .markdown_preview_tmp
