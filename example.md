@@ -6,4 +6,13 @@ date: 2022/7/7
 ---
 
 # 来てくれてありがとう
-帰れ
+帰れ\
+↓の記述の前には1行開けましょう\
+
+---
+urlcolor: cyan
+header-includes:
+    - \usepackage{minted}
+    - \usepackage{setspace}
+    - \usepackage{mdframed}
+---
