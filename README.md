@@ -5,18 +5,24 @@
 * Install applications listed below.
   * TeX Live
   * pandoc
-  * pygments
+    ```bash
+    # Arch Linux
+    $ sudo pacman -S pandoc
+    # macOS
+    $ brew install pandoc
     ```
-    pip install pygments
+  * pygments
+    ```bash
+    $ pip install pygments
     ```
   * pandoc-minted
-    ```
-    pip install pandoc-minted
+    ```bash
+    $ pip install pandoc-minted
     ```
 * Add `bdoc`, TeX Live, pandoc, `minted_filter.py` to your `PATH`.
 
 ## How to use
-```shell
+```bash
 $ bdoc hoge.md
 ```
 
