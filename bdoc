@@ -1,25 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 
-mkdir -p .markdown_preview_tmp
-set -e
-cd .markdown_preview_tmp
-fname=`basename $1`
-cp ../$fname .
+FILENAME=`basename $1 | cut -f1 -d'.'`
 
-cat <<EOF >> $fname
-
----
-urlcolor: cyan
-header-includes:
-    - \usepackage{minted}
-    - \usepackage{setspace}
-    - \usepackage{mdframed}
----
-EOF
-
-pandoc -s --filter minted_filter.py $fname -o ${fname%%.md}.tex -f markdown -t latex -V documentclass=bxjsarticle -V classoption=pandoc -V geometry:margin=10mm
-lualatex -shell-escape ${fname%%.md}.tex
-
-cp ${fname%%.md}.pdf ../${fname%%.md}.pdf
-cd ../
-rm -r .markdown_preview_tmp
+asciidoctor -b docbook5 -o - $FILENAME.adoc | pandoc -s -f docbook --pdf-engine=lualatex -V documentclass=ltjsarticle -o $FILENAME.pdf
