@@ -2,4 +2,4 @@
 
 FILENAME=`basename $1 | cut -f1 -d'.'`
 
-asciidoctor -b docbook5 -o - $FILENAME.adoc | pandoc -s -f docbook --pdf-engine=lualatex -V documentclass=ltjsarticle -o $FILENAME.pdf
+asciidoctor -b docbook5 -o - $FILENAME.adoc | pandoc -s -f docbook --pdf-engine=lualatex -V documentclass=ltjsarticle -V geometry:margin=20truemm -o $FILENAME.pdf
