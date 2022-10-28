@@ -1,0 +1,24 @@
+= 線形代数学Ⅰ 第1回レポート
+:author: 学籍番号: N/A, 氏名: yude
+:date: 2004/1/5
+
+[.lead]
+課題課題課題課題課題課題課題課題課題課題課題課題課題課題課題課題課題課題課題
+
+* リスト
+** ネストされたリスト
+** ネストされたリスト
++
+[source, c]
+----
+printf("Hello world!\n");
+----
+
+. 順序付きリスト
+.. ネストされた順序付きリスト
+.. ネストされた順序付きリスト
+
+image::http://asciidoctor.org/images/octocat.jpg[ダミー画像]
+
+NOTE: その他の記法については、以下のページが参考になります: +
+https://takumon.github.io/asciidoc-syntax-quick-reference-japanese-translation/#_%E3%83%AA%E3%83%B3%E3%82%AF[Asciidoctor 文法クイックリファレンス(日本語訳)]
